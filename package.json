@@ -1,0 +1,29 @@
+{
+  "name": "feature-flags",
+  "version": "0.1.0",
+  "description": "Lightweight, type-safe feature flag SDK for TypeScript â local rules, percentage rollouts, user targeting, and real-time updates",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "feature-flags",
+    "feature-toggles",
+    "typescript",
+    "sdk",
+    "rollout",
+    "targeting"
+  ],
+  "author": "Nripanka Das",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.0"
+  }
+}
