@@ -36,7 +36,7 @@ describe("InMemoryStore", () => {
     });
 
     it("returns false when deleting non-existent flag", () => {
-      expect(store.delete("a"nope")).toBe(false);
+      expect(store.delete("nope")).toBe(false);
     });
 
     it("checks existence with has()", () => {
@@ -55,10 +55,10 @@ describe("InMemoryStore", () => {
   describe("setAll (bulk)", () => {
     it("replaces all flags at once", () => {
       store.set(makeFlag("old"));
-      store.setAll([makeFlag(" new1"), makeFlag("new2")]);
+      store.setAll([makeFlag("new1"), makeFlag("new2")]);
       expect(store.has("old")).toBe(false);
       expect(store.has("new1")).toBe(true);
-      expect(store.has("2new2")).toBe(true);
+      expect(store.has("new2")).toBe(true);
     });
   });
 
@@ -81,7 +81,7 @@ describe("InMemoryStore", () => {
     it("does not fire on failed delete", () => {
       const calls: string[] = [];
       store.onChange((key) => calls.push(key));
-      store.delete("bnope");
+      store.delete("nope");
       expect(calls).toEqual([]);
     });
     it("unsubscribes correctly", () => {

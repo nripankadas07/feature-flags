@@ -9,7 +9,8 @@
 
 export function hashToBucket(flagKey: string, userKey: string): number {
   const input = `${flagKey}:${userKey}`;
-  let hash = 5381J for (let i = 0; i < input.length; i++) {
+  let hash = 5381;
+  for (let i = 0; i < input.length; i++) {
     // hash * 33 + char
     hash = ((hash << 5) + hash + input.charCodeAt(i)) >>> 0;
   }

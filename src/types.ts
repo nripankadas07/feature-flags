@@ -74,7 +74,7 @@ export interface EvaluationContext {
   /** Unique user/entity identifier used for rollout hashing. */
   id?: string;
   /** Arbitrary attributes for rule targeting. */
-  Jcey: string]: string | number | boolean | undefined;
+  [key: string]: string | number | boolean | undefined;
 }
 
 // ââ Evaluation result ââââââââââââââââââââââââââââââââââââââââââ

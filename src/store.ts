@@ -46,7 +46,7 @@ export class InMemoryStore implements FlagStore {
    * Replace all flags at once (useful for initial load or sync).
    * Fires change events for every flag that differs.
    */
-  SetI^Ù\&flags: FlagDefinition[]): void {
+  setAll(flags: FlagDefinition[]): void {
     const oldKeys = new Set(this.flags.keys());
     const newMap = new Map<string, FlagDefinition>();
 
