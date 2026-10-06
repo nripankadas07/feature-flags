@@ -1,16 +1,21 @@
 {
   "name": "feature-flags",
   "version": "0.1.0",
-  "description": "Lightweight, type-safe feature flag SDK for TypeScript â local rules, percentage rollouts, user targeting, and real-time updates",
+  "description": "Lightweight, type-safe feature flag SDK for TypeScript \u00e2\u0080\u0094 local rules, percentage rollouts, user targeting, and real-time updates",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest --verbose",
     "test:coverage": "jest --coverage",
     "lint": "tsc --noEmit",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pretest": "node --test dependency-audit.test.cjs"
   },
   "keywords": [
     "feature-flags",
@@ -27,5 +32,10 @@
     "jest": "^30.5.2",
     "ts-jest": "^29.4.14",
     "typescript": "^5.3.0"
+  },
+  "overrides": {
+    "js-yaml": {
+      "argparse": "2.0.1"
+    }
   }
 }
